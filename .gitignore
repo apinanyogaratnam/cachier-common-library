@@ -4,3 +4,4 @@
 .env.production
 volumes
 .DS_Store
+venv
