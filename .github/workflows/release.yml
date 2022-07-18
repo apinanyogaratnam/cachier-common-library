@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+env:
+  CR_PAT: ${{ secrets.CR_PAT }}
+
+jobs:
+  build:
+    if: ${{ false }}
+    name: Build Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install make
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make
+      - name: Build Image
+        run: |
+          make build
+      - name: Tag Image
+        run: make tag-image
+      - name: Authenticate Image Registry
+        run: echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+      - name: Push Image
+        run: make push-image
+
+  release:
+    name: "Release"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false

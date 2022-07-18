@@ -1,0 +1,12 @@
+Dockerfile
+.gitignore
+README.md
+.dockerignore
+.github
+*.log
+*.env
+.env.local
+.env.production
+.vscode
+volumes
+.DS_Store

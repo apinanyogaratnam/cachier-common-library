@@ -1,0 +1,6 @@
+*.log
+.env.local
+*.env
+.env.production
+volumes
+.DS_Store
