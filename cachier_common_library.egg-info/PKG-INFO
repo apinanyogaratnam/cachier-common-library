@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cachier-common-library
-Version: 0.0.1
+Version: 0.0.2
 Summary: A python library for common classes and functions used to build cachier applications
 Home-page: https://github.com/apinanyogaratnam/cachier-common-library
 Author: apinanyogaratnam
@@ -55,6 +55,7 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 
 <!--
 TODO comments:
+TODO: commonize checking if driver is valid
 -->
 
 
