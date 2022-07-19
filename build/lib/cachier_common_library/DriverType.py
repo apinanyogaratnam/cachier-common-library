@@ -5,9 +5,9 @@ class DriverType:
     PICKLE = 'pickle'
 
     def is_valid(self: 'DriverType', driver_type: str | None) -> bool:
-        return driver_type in [
+        return driver_type in set([
             self.RAM,
             self.JSON,
             self.SQLITE,
             self.PICKLE,
-        ]
+        ])
