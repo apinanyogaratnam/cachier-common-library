@@ -1,6 +1,6 @@
-# Base Repository Template
+# Cachier Common Library
 
-A template of README best practices to make your README simple to understand and easy to use.
+A python library for common classes and functions used to build cachier applications
 
 ## Table of Contents
 
@@ -11,32 +11,32 @@ A template of README best practices to make your README simple to understand and
 
 ## Installation
 
-Download to your project directory, add `README.md`, and commit:
+Install the package from pypi:
 
 ```sh
-curl -LO http://git.io/Xy0Chg
-git add README.md
-git commit -m "Use README Boilerplate"
+pip install cachier-common-library
 ```
 
 ## Usage
 
-Replace the contents of `README.md` with your project's:
+```python
+from cachier_common_library import DriverType
 
-- Name
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-- License
-
-Feel free to remove any sections that aren't applicable to your project.
+# Using the DriverType enum
+print(DriverType.RAM)
+print(DriverType.JSON)
+print(DriverType.SQLITE)
+print(DriverType.PICKLE)
+```
 
 ## Support
 
-Please [open an issue](https://github.com/fraction/readme-boilerplate/issues/new) for support.
+Please [open an issue](https://github.com/apinanyogaratnam/cachier-common-library/issues/new) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/apinanyogaratnam/cachier-common-library/compare/). -->
+
+<!--
+TODO comments:
+-->
