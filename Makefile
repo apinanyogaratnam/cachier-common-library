@@ -17,3 +17,7 @@ build:
 
 upload:
 	twine upload dist/cachier_python-${VERSION}-py3-none-any.whl
+
+workflow:
+	git tag -m 'v${VERSION}' v${VERSION}
+	git push --tags
