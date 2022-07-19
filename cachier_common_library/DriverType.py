@@ -4,7 +4,7 @@ class DriverType:
     SQLITE = 'sqlite'
     PICKLE = 'pickle'
 
-    def is_valid(self: 'DriverType', driver_type: str) -> bool:
+    def is_valid(self: 'DriverType', driver_type: str | None) -> bool:
         return driver_type in [
             self.RAM,
             self.JSON,
