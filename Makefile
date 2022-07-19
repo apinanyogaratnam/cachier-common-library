@@ -1,5 +1,5 @@
 IMAGE := cachier-common-library
-VERSION := 0.0.1
+VERSION := 0.0.2
 REGISTRY_URL := ghcr.io/apinanyogaratnam/${IMAGE}
 IMAGE_VERSION_NAME := ${REGISTRY_URL}:${VERSION}
 IMAGE_LATEST_VERSION_NAME := ${REGISTRY_URL}:latest
