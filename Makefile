@@ -16,7 +16,7 @@ build:
 	python3 setup.py sdist bdist_wheel
 
 upload:
-	twine upload dist/cacher_common_library-${VERSION}-py3-none-any.whl
+	twine upload dist/cachier_common_library-${VERSION}-py3-none-any.whl
 
 workflow:
 	git tag -m 'v${VERSION}' v${VERSION}
