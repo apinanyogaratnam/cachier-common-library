@@ -1,5 +1,7 @@
 from cachier_common_library.DriverType import DriverType
+from cachier_common_library.DriverTypeError import DriverTypeError
 
-
-class DriverType(DriverType):
-    pass
+__all__ = [
+    'DriverType',
+    'DriverTypeError',
+]

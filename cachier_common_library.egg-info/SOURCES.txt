@@ -2,6 +2,7 @@ LICENSE
 README.md
 setup.py
 cachier_common_library/DriverType.py
+cachier_common_library/DriverTypeError.py
 cachier_common_library/__init__.py
 cachier_common_library.egg-info/PKG-INFO
 cachier_common_library.egg-info/SOURCES.txt
