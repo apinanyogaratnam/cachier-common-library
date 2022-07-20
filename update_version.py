@@ -86,7 +86,7 @@ def update_makefile_version(version):
                 line = 'VERSION = ' + version + '\n'
                 updated_version = True
     with open('Makefile', 'w') as file:
-        file.write(lines)
+        file.writelines(lines)
 
 
 def update_setup_version(version):
@@ -98,7 +98,7 @@ def update_setup_version(version):
                 line = f"version='{version}',\n"
                 updated_version = True
     with open('setup.py', 'w') as file:
-        file.write(lines)
+        file.writelines(lines)
 
 
 if __name__ == '__main__':
