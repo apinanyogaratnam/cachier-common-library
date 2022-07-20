@@ -91,12 +91,13 @@ def update_makefile_version(version):
 def update_setup_version(version):
     with open('setup.py', 'r') as file:
         lines = file.readlines()
+        updated_version = False
         for line in lines:
-            if 'version' in line:
+            if 'version' in line and not updated_version:
                 line = f"version='{version}',\n"
-                break
+                updated_version = True
     with open('setup.py', 'w') as file:
-        file.writelines(lines)
+        file.write(lines)
 
 
 if __name__ == '__main__':
