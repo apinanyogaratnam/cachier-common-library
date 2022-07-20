@@ -80,9 +80,10 @@ def update_major_version(version):
 def update_makefile_version(version):
     with open('Makefile', 'r') as file:
         lines = file.readlines()
-        for line in lines:
+        for i, line in enumerate(lines):
             if 'VERSION' in line:
                 line = 'VERSION = ' + version + '\n'
+                lines[i] = line
                 break
 
     with open('Makefile', 'w') as file:
@@ -92,9 +93,10 @@ def update_makefile_version(version):
 def update_setup_version(version):
     with open('setup.py', 'r') as file:
         lines = file.readlines()
-        for line in lines:
+        for i, line in enumerate(lines):
             if 'version' in line:
                 line = f"version='{version}',\n"
+                lines[i] = line
                 break
 
     with open('setup.py', 'w') as file:
