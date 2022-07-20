@@ -17,9 +17,14 @@ with open('setup.py', 'r') as file:
 print('setup.py version', version)
 
 
-def validate_version(version) -> bool:
+def validate_version(version):
     if len(version.split('.')) != 3:
         raise ValueError('Version must be in the format x.y.z')
     for part in version.split('.'):
         if not part.isdigit():
             raise ValueError('Version must be in the format x.y.z')
+
+
+def validate_equivalence(version1, version2):
+    if version1 != version2:
+        raise ValueError('Versions must be equivalent')
