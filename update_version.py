@@ -1,6 +1,7 @@
 import sys
 
 
+# TODO: split into multiple functions
 def main():
     with open('Makefile', 'r') as file:
         lines = file.readlines()
