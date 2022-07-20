@@ -33,6 +33,8 @@ def main():
     else:
         raise ValueError('Invalid argument')
 
+    print('new version', version)
+
 
 def validate_version(version):
     if len(version.split('.')) != 3:
