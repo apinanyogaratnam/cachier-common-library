@@ -86,7 +86,7 @@ def update_makefile_version(version):
                 line = 'VERSION = ' + version + '\n'
                 updated_version = True
     with open('Makefile', 'w') as file:
-        file.writelines(lines)
+        file.write(lines)
 
 
 def update_setup_version(version):
