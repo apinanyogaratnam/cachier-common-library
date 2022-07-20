@@ -11,7 +11,3 @@ class DriverType:
             self.SQLITE,
             self.PICKLE,
         ])
-
-
-class DriverTypeError(Exception):
-    pass
