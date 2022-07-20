@@ -74,6 +74,17 @@ def update_major_version(version):
     return '.'.join(parts)
 
 
+def update_makefile_version(version):
+    with open('Makefile', 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            if 'VERSION' in line:
+                line = 'VERSION = ' + version + '\n'
+                break
+    with open('Makefile', 'w') as file:
+        file.writelines(lines)
+
+
 if __name__ == '__main__':
     main()
     print('Version is valid')
