@@ -85,6 +85,17 @@ def update_makefile_version(version):
         file.writelines(lines)
 
 
+def update_setup_version(version):
+    with open('setup.py', 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            if 'version' in line:
+                line = f"version='{version}',\n"
+                break
+    with open('setup.py', 'w') as file:
+        file.writelines(lines)
+
+
 if __name__ == '__main__':
     main()
     print('Version is valid')
