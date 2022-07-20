@@ -5,4 +5,4 @@ with open('Makefile', 'r') as file:
             version = line.split('=')[1].strip()
             break
 
-print('version', version)
+print('makefile version', version)
