@@ -1,3 +1,6 @@
+import sys
+
+
 def main():
     with open('Makefile', 'r') as file:
         lines = file.readlines()
@@ -20,6 +23,15 @@ def main():
     validate_version(makefile_version)
     validate_equivalence(makefile_version, setup_version)
     version = makefile_version
+
+    if sys.argv[1] == '--patch':
+        version = update_patch_version(version)
+    elif sys.argv[1] == '--minor':
+        version = update_minor_version(version)
+    elif sys.argv[1] == '--major':
+        version = update_major_version(version)
+    else:
+        raise ValueError('Invalid argument')
 
 
 def validate_version(version):
