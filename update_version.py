@@ -39,6 +39,9 @@ def main():
 
     print('new version', version)
 
+    update_makefile_version(version)
+    update_setup_version(version)
+
 
 def validate_version(version):
     if len(version.split('.')) != 3:
