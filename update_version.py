@@ -24,6 +24,9 @@ def main():
     validate_equivalence(makefile_version, setup_version)
     version = makefile_version
 
+    if len(sys.argv) <= 1:
+        raise ValueError('No version update type specified')
+
     if sys.argv[1] == '--patch':
         version = update_patch_version(version)
     elif sys.argv[1] == '--minor':
