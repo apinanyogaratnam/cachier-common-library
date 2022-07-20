@@ -82,7 +82,7 @@ def update_makefile_version(version):
         lines = file.readlines()
         for i, line in enumerate(lines):
             if 'VERSION' in line:
-                line = 'VERSION = ' + version + '\n'
+                line = 'VERSION := ' + version + '\n'
                 lines[i] = line
                 break
 
