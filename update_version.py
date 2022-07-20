@@ -1,20 +1,24 @@
-with open('Makefile', 'r') as file:
-    lines = file.readlines()
-    for line in lines:
-        if 'VERSION' in line:
-            version = line.split('=')[1].strip()
-            break
+def main():
+    with open('Makefile', 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            if 'VERSION' in line:
+                makefile_version = line.split('=')[1].strip()
+                break
 
-print('makefile version', version)
+    print('makefile version', makefile_version)
 
-with open('setup.py', 'r') as file:
-    lines = file.readlines()
-    for line in lines:
-        if 'version' in line:
-            version = line.split('=')[1].strip().strip(',').strip("'")
-            break
+    with open('setup.py', 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            if 'version' in line:
+                setup_version = line.split('=')[1].strip().strip(',').strip("'")
+                break
 
-print('setup.py version', version)
+    print('setup.py version', setup_version)
+
+    validate_version(makefile_version)
+    validate_equivalence(setup_version)
 
 
 def validate_version(version):
@@ -28,3 +32,9 @@ def validate_version(version):
 def validate_equivalence(version1, version2):
     if version1 != version2:
         raise ValueError('Versions must be equivalent')
+
+
+if __name__ == '__main__':
+    main()
+    print('Version is valid')
+    exit(0)
