@@ -80,10 +80,11 @@ def update_major_version(version):
 def update_makefile_version(version):
     with open('Makefile', 'r') as file:
         lines = file.readlines()
+        updated_version = False
         for line in lines:
-            if 'VERSION' in line:
+            if 'VERSION' in line and not updated_version:
                 line = 'VERSION = ' + version + '\n'
-                break
+                updated_version = True
     with open('Makefile', 'w') as file:
         file.writelines(lines)
 
