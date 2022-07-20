@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setuptools.setup(
     name='cachier-common-library',
-    version='0.0.5',
+    version='0.1.0',
     author='apinanyogaratnam',
     author_email='apinanapinan@icloud.com',
     description='A python library for common classes and functions used to build cachier applications',
