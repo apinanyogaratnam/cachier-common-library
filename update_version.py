@@ -35,6 +35,27 @@ def validate_equivalence(version1, version2):
         raise ValueError('Versions must be equivalent')
 
 
+def update_patch_version(version):
+    parts = version.split('.')
+    parts[2] = str(int(parts[2]) + 1)
+    return '.'.join(parts)
+
+
+def update_minor_version(version):
+    parts = version.split('.')
+    parts[1] = str(int(parts[1]) + 1)
+    parts[2] = '0'
+    return '.'.join(parts)
+
+
+def update_major_version(version):
+    parts = version.split('.')
+    parts[0] = str(int(parts[0]) + 1)
+    parts[1] = '0'
+    parts[2] = '0'
+    return '.'.join(parts)
+
+
 if __name__ == '__main__':
     main()
     print('Version is valid')
