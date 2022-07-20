@@ -18,7 +18,7 @@ def main():
     print('setup.py version', setup_version)
 
     validate_version(makefile_version)
-    validate_equivalence(setup_version)
+    validate_equivalence(makefile_version, setup_version)
 
 
 def validate_version(version):
