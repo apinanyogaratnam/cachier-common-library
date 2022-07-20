@@ -19,6 +19,7 @@ def main():
 
     validate_version(makefile_version)
     validate_equivalence(makefile_version, setup_version)
+    version = makefile_version
 
 
 def validate_version(version):
