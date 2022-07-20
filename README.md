@@ -39,5 +39,5 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 
 <!--
 TODO comments:
-TODO: create InvalidDriverException
+TODO: create InvalidDriverError
 -->
