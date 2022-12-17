@@ -1,5 +1,7 @@
 # Cachier Common Library
 
+[![Downloads](https://static.pepy.tech/personalized-badge/cachier-common-library?period=total&units=none&left_color=black&right_color=green&left_text=Downloads)](https://pepy.tech/project/cachier-common-library)
+
 A python library for common classes and functions used to build cachier applications
 
 ## Table of Contents
